@@ -1,0 +1,122 @@
+/* ----------- GLOBAL ----------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000; /* Negro fuerte */
+    background: linear-gradient(180deg, #FFF3C4 0%, #FFE8A3 50%, #F9D67A 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* LOGO ARRIBA */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header img {
+    width: 120px;
+}
+
+/* CONTENEDOR CENTRAL */
+.container {
+    width: 90%;
+    max-width: 420px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* TÍTULOS */
+h1, h2 {
+    text-align: center;
+    color: #D97742; /* Naranja oscuro suave */
+}
+
+/* INPUTS */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 16px;
+    border: 2px solid #4A4A4A; /* Gris fuerte */
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+/* BOTONES */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #F7B267;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #F5A15E;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+footer a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* HOJA ABAJO IZQUIERDA */
+.leaf {
+    position: fixed;
+    right: 20px;   /* ahora a la DERECHA */
+    bottom: 20px;
+    width: 70px;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/* HEADER NUEVO - Logo + Nombre a la izquierda */
+header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 20px;
+}
+
+header img {
+    width: 60px;
+    cursor: pointer;
+}
+
+header .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #D97742; /* Naranja suave oscuro */
+    cursor: pointer;
+}.result {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.result.success {
+    color: #1f7a1f; /* verde oscuro */
+}
+
+.result.error {
+    color: #b00020; /* rojo oscuro */
+}
