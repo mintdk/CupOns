@@ -1,0 +1,136 @@
+/* --------------------
+   RESET
+-------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --------------------
+   COLORS
+-------------------- */
+:root {
+    --yellow: #f2d16b;      /* amarillo suave */
+    --orange: #e6a04c;      /* naranja suave */
+    --dark: #111111;        /* negro fuerte */
+    --gray: #444444;        /* gris fuerte */
+    --light-gray: #f5f5f5;
+}
+
+/* --------------------
+   BODY
+-------------------- */
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, var(--yellow), var(--orange));
+    color: var(--dark);
+    display: flex;
+    flex-direction: column;
+}
+
+/* --------------------
+   HEADER
+-------------------- */
+header {
+    padding: 20px 30px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+}
+
+/* --------------------
+   MAIN CONTAINER
+-------------------- */
+.container {
+    flex: 1;
+    max-width: 420px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    color: var(--gray);
+}
+
+/* --------------------
+   INPUTS & BUTTONS
+-------------------- */
+input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--dark);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* --------------------
+   LINKS & TEXT
+-------------------- */
+.link {
+    display: inline-block;
+    margin-top: 18px;
+    color: var(--gray);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#result,
+#generated {
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+/* --------------------
+   FOOTER
+-------------------- */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+}
+
+.creator {
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.leaf img {
+    width: 36px;
+}
