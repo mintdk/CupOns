@@ -53,3 +53,23 @@ if (generateBtn) {
     }
   });
 }
+
+function adjustContainerWidth() {
+    const container = document.querySelector("main.container");
+    if (!container) return;
+
+    const screenWidth = window.innerWidth;
+
+    let widthPercent = 90;
+
+    if (screenWidth <= 400) {
+        widthPercent = 100; 
+    } else if (screenWidth <= 600) {
+        widthPercent = 95; 
+    }
+
+    container.style.width = widthPercent + "%";
+}
+
+window.addEventListener("load", adjustContainerWidth);
+window.addEventListener("resize", adjustContainerWidth);
