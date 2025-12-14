@@ -37,8 +37,19 @@ if (generateBtn) {
 
     const code = generateCode();
 
-    await db.collection("coupons").doc(code).set({
-      name: name,
-      desc: desc,
-      remaining: amount,
-      createdAt: firebase
+    try {
+      await db.collection("coupons").doc(code).set({
+        name: name,
+        desc: desc,
+        remaining: amount,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+      });
+
+      document.getElementById("generated").innerHTML =
+        `Your coupon code:<br><strong>${code}</strong>`;
+    } catch (error) {
+      console.error("Error creating coupon:", error);
+      alert("Failed to create coupon. Check console for details.");
+    }
+  });
+}
