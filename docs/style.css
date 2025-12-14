@@ -137,4 +137,48 @@ footer {
         font-size: 18px;
     }
 }
+/* --------------------
+   RESPONSIVE MOBILE
+-------------------- */
+@media (max-width: 480px) {
+
+    body {
+        display: block; /* quita el flex de toda la altura */
+        background: linear-gradient(180deg, var(--yellow), var(--orange));
+    }
+
+    .container {
+        margin: 40px auto;
+        padding: 20px;
+        max-width: 95%;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .container h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    header {
+        padding: 15px 20px;
+    }
+
+    .logo span {
+        font-size: 18px;
+    }
+}
+
 
