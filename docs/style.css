@@ -73,7 +73,7 @@ footer {
 }
 main.container {
     flex: 1;
-    max-width: 450px;
+    max-width: 370px;
     width: 90%;
     margin: 0 auto;
     background: var(--light-yellow);
@@ -87,14 +87,14 @@ main.container {
 }
 input, button {
     min-height: 40px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 16px;
+    border-radius: 14px;
+    border: 2px solid #ccc;
+    font-size: 22px;
 }
 
 button {
     background: var(--dark);
-    color: white;
+    color: orange;
     border: none;
     cursor: pointer;
 }
@@ -143,3 +143,4 @@ button:hover {
         padding: 9px;
     }
 }
+
