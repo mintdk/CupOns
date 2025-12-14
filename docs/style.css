@@ -23,14 +23,14 @@
    BODY
 -------------------- */
 body {
-    background: linear-gradient(180deg, var(--yellow), var(--orange));
-    color: var(--dark);
+    min-height: 100vh; /* cubre toda la pantalla */
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 20px 0;
-    min-height: auto; /* ajusta al contenido */
+    background: linear-gradient(180deg, var(--yellow), var(--orange));
 }
 
 /* --------------------
@@ -67,8 +67,8 @@ header {
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     text-align: center;
-    display: block; /* se ajusta al contenido */
-    margin: 20px auto;
+    display: block; 
+    margin: 30px auto; /* separa del header/footer */
 }
 
 .container h1 {
@@ -154,7 +154,7 @@ footer {
     .container {
         padding: 20px;
         border-radius: 14px;
-        margin: 15px auto;
+        margin: 20px auto; /* mantiene separación con header/footer */
     }
 
     .container h1 {
