@@ -54,18 +54,6 @@ if (generateBtn) {
   });
 }
 
-function adjustContainerWidth() {
-    const container = document.querySelector("main.container");
-    if (!container) return;
-
-    const screenWidth = window.innerWidth;
-
-    let widthPercent = 90;
-
-    if (screenWidth <= 400) {
-        widthPercent = 100; 
-    } else if (screenWidth <= 600) {
-        widthPercent = 95; 
     }
 
     container.style.width = widthPercent + "%";
@@ -73,3 +61,49 @@ function adjustContainerWidth() {
 
 window.addEventListener("load", adjustContainerWidth);
 window.addEventListener("resize", adjustContainerWidth);
+
+function adjustLayout() {
+    const container = document.querySelector("main.container");
+    const inputs = document.querySelectorAll("input");
+    const buttons = document.querySelectorAll("button");
+
+    if (!container) return;
+
+    const screenWidth = window.innerWidth;
+
+    let widthPercent = 90; 
+    if (screenWidth <= 400) {
+        widthPercent = 100; 
+    } else if (screenWidth <= 600) {
+        widthPercent = 95;
+    }
+    container.style.width = widthPercent + "%";
+
+    let inputPadding = 12;
+    let buttonPadding = 12;
+    let fontSize = 16;
+
+    if (screenWidth <= 400) {
+        inputPadding = 10;
+        buttonPadding = 10;
+        fontSize = 14;
+    } else if (screenWidth <= 600) {
+        inputPadding = 11;
+        buttonPadding = 11;
+        fontSize = 15;
+    }
+
+    inputs.forEach(input => {
+        input.style.padding = inputPadding + "px";
+        input.style.fontSize = fontSize + "px";
+    });
+
+    buttons.forEach(button => {
+        button.style.padding = buttonPadding + "px";
+        button.style.fontSize = fontSize + "px";
+    });
+}
+window.addEventListener("load", adjustLayout);
+window.addEventListener("resize", adjustLayout);
+
+
